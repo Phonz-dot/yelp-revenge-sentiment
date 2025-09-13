@@ -1,13 +1,16 @@
 # Virtual environment
 venv/
-
+env/
 # Environment variables
 .env
+.venv
+ENV/
 
 # Python
 __pycache__/
 *.py[cod]
 *.so
+.Python
 
 # Data
 data/raw/*
@@ -21,3 +24,14 @@ models/trained/*
 
 #Jupyter
 .ipynb_checkpoints
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Distribution
+build/
+dist/
+*.egg-info/

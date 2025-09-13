@@ -6,25 +6,19 @@ from pathlib import Path
 load_dotenv()
 
 class Config:
-    """Project configuration class."""
-    
-    # Database
-    DB_HOST = os.getenv('DB_HOST')
-    DB_PORT = int(os.getenv('DB_PORT', 5432))
-    DB_NAME = os.getenv('DB_NAME')
+    """Configuration for Yelp sentiment analysis project."""
     
     # Paths
-    DATA_PATH = Path(os.getenv('DATA_PATH', './data'))
-    MODELS_PATH = Path(os.getenv('MODELS_PATH', './models/trained'))
+    PROJECT_ROOT = Path(__file__).parent.parent
+    DATA_PATH = PROJECT_ROOT / 'data'
+    RAW_DATA_PATH = DATA_PATH / 'raw'
+    PROCESSED_DATA_PATH = DATA_PATH / 'processed'
+    MODEL_PATH = PROJECT_ROOT / 'models' / 'trained'
     
-    # Settings
-    DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
-    ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
+    # Model settings
+    MODEL_NAME = os.getenv('MODEL_NAME', 'bert-base-uncased')
+    BATCH_SIZE = int(os.getenv('BATCH_SIZE', 32))
     
-    @classmethod
-    def validate(cls):
-        """Validate required environment variables."""
-        required = ['DB_HOST', 'DB_NAME']
-        missing = [var for var in required if not getattr(cls, var)]
-        if missing:
-            raise ValueError(f"Missing required environment variables: {', '.join(missing)}")
+    # Training settings
+    RANDOM_SEED = int(os.getenv('RANDOM_SEED', 42))
+    NUM_EPOCHS = int(os.getenv('NUM_EPOCHS', 5))
