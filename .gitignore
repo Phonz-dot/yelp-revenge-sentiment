@@ -18,6 +18,7 @@ data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 data/raw/yelp_dataset/yelp_academic_dataset_review.json
+!data/raw/yelp_dataset/yelp_academic_dataset_business.json
 *.tar
 *.gz
 
