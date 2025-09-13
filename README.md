@@ -1,1 +1,0 @@
-This project is geared to analyzing for revengeful sentiment in customer's review who have the intention in tainting the reputation of a business.
