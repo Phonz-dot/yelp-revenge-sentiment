@@ -14,8 +14,10 @@ class Config:
     RAW_DATA_PATH = DATA_PATH / 'raw'
     PROCESSED_DATA_PATH = DATA_PATH / 'processed'
     MODEL_PATH = PROJECT_ROOT / 'models' / 'trained'
-    YELP_PATH = RAW_DATA_PATH / 'yelp_dataset'
     
+
+
+
     # Model settings
     MODEL_NAME = os.getenv('MODEL_NAME', 'bert-base-uncased')
     BATCH_SIZE = int(os.getenv('BATCH_SIZE', 32))
