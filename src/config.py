@@ -14,6 +14,7 @@ class Config:
     RAW_DATA_PATH = DATA_PATH / 'raw'
     PROCESSED_DATA_PATH = DATA_PATH / 'processed'
     MODEL_PATH = PROJECT_ROOT / 'models' / 'trained'
+    YELP_PATH = RAW_DATA_PATH / 'yelp_dataset'
     
     # Model settings
     MODEL_NAME = os.getenv('MODEL_NAME', 'bert-base-uncased')
@@ -22,3 +23,10 @@ class Config:
     # Training settings
     RANDOM_SEED = int(os.getenv('RANDOM_SEED', 42))
     NUM_EPOCHS = int(os.getenv('NUM_EPOCHS', 5))
+
+    # Data processing settings
+    CHUNK_SIZE = 10_000  # Number of records to process at a time
+    REVIEW_FEATURES = ['review_id', 'user_id', 'business_id', 'stars', 'text', 'date', 'useful']
+
+    #Sampling settings
+    SAMPLE_SIZE = 100_000  # Number of reviews to sample for initial analysis
