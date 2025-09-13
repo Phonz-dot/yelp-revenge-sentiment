@@ -17,7 +17,7 @@ data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
-data/raw/yelp_dataset/*.json
+data/raw/yelp_dataset/yelp_academic_dataset_review.json
 *.tar
 *.gz
 
