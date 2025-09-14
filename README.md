@@ -1,12 +1,12 @@
 # Detecting Revengeful Sentiment in Yelp Reviews Using Large Language Models
 
 ## Description
- The purpose of this project is to identify and analyze instances of revenge-driven sentiment in Yelp reviews, using large language models (LLMs) to go beyond traditional sentiment analysis and uncover nuanced emotional intent, particularly when users leave reviews motivated by retaliation rather than genuine feedback.
+This project aims to detect and analyze revenge-driven sentiment in Yelp reviews using large language models (LLMs). Unlike traditional sentiment analysis, which focuses on polarity (positive/negative), this approach seeks to uncover emotionally charged reviews motivated by retaliation, personal vendettas, or exaggerated negativity. The goal is to build a pipeline that can identify these nuanced signals and support deeper understanding of user intent.
 
 ## Setup
 1. Clone the repository:
-    git clone https://github.com/your-username/yelp-revenge-sentiment.git
-    cd yelp-revenge-sentiment
+    `git clone https://github.com/your-username/yelp-revenge-sentiment.git`
+    `cd yelp-revenge-sentiment`
 2. Create virtual environment: `python -m venv venv`
 3. Activate environment: `.\venv\Scripts\activate`
 4. Install dependencies: `pip install -r requirements.txt`
