@@ -15,8 +15,8 @@ class Config:
     PROCESSED_DATA_PATH = DATA_PATH / 'processed'
     MODEL_PATH = PROJECT_ROOT / 'models' / 'trained'
 
-    REVIEW_FILE = str(PROCESSED_DATA_PATH / "sampled_reviews.json")
-    BUSINESS_FILE = str(RAW_DATA_PATH / "yelp_dataset" / "yelp_academic_dataset_business.json.gz")
+    REVIEW_FILE = PROCESSED_DATA_PATH / "sampled_reviews.json"
+    BUSINESS_FILE = RAW_DATA_PATH / "yelp_dataset" / "yelp_academic_dataset_business.json.gz"
 
 
 

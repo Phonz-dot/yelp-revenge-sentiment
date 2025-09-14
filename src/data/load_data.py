@@ -3,21 +3,16 @@ import json
 import pandas as pd
 from pathlib import Path
 
-def load_reviews_chunks(chunk_size=10_000, max_chunks=None):
+def load_reviews_chunks(file_path, chunk_size=10_000, max_chunks=None):
     """
-    Load Yelp reviews in chunks from either a plain or gzipped JSONL file.
+    Load Yelp reviews in chunks from a user-specified JSON or gzipped JSONL file.
 
     Args:
+        file_path: Path to the JSON or JSON.GZ file
         chunk_size: Number of reviews per chunk
         max_chunks: Maximum number of chunks to load (None for all)
     """
-    # Define both file paths
-    json_path = Config.RAW_DATA_PATH / "yelp_dataset" / "yelp_academic_dataset_review.json"
-    gz_path = Config.RAW_DATA_PATH / "yelp_dataset" / "yelp_academic_dataset_review.json.gz"
-
-    # Use .gz if it exists, otherwise fallback to .json
-    file_path = gz_path if gz_path.exists() else json_path
-    open_func = gzip.open if file_path.suffix == ".gz" else open
+    open_func = gzip.open if str(file_path).endswith(".gz") else open
 
     chunks = []
     chunk_count = 0
