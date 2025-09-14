@@ -31,6 +31,7 @@ class Config:
     # Data processing settings
     CHUNK_SIZE = 10_000  # Number of records to process at a time
     REVIEW_FEATURES = ['review_id', 'user_id', 'business_id', 'stars', 'text', 'date', 'useful']
+    BUSINESS_FEATURES = ['business_id', 'name', 'address', 'city', 'state', 'postal_code', 'latitude', 'longitude', 'stars', 'review_count', 'is_open', 'categories']
 
     #Sampling settings
     SAMPLE_SIZE = 100_000  # Number of reviews to sample for initial analysis
