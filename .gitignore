@@ -18,9 +18,6 @@ __pycache__/
 data/raw/yelp_dataset/yelp_academic_dataset_review.json
 !data/raw/yelp_dataset/yelp_academic_dataset_business.json.gz
 
-
-
-
 # Models
 models/trained/*
 !models/trained/.gitkeep
